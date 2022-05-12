@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/timerProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/widthItems"
+        android:layout_height="@dimen/widthItems"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="-90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="@color/teal_200"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/timerProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/timerProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/timerProgressBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/timerProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/timerProgressBar"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/timerProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/timerProgressBar"
+        app:srcCompat="@drawable/ic_baseline_play_circle_filled_24" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerProgressBar"
+        tools:listitem="@layout/list_item_alarms" />
+
+</android.support.constraint.ConstraintLayout>
